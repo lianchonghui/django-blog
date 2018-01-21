@@ -1,0 +1,22 @@
+.card {
+  border: $width-border solid $gray-100;
+}
+
+.card-image {
+  width: 100%;
+
+}
+
+.card-header {
+  border-bottom: $width-border solid $gray-100;
+  padding: 10px 15px;
+}
+
+.card-footer {
+  border-top: $width-border solid $gray-100;
+  padding: 10px 15px;
+}
+
+.card-body {
+  padding: 15px;
+}

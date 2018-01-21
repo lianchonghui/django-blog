@@ -1,0 +1,50 @@
+.search-form {
+  position: relative;
+
+  input[type=search] {
+    background-color: $gray-100;
+    outline: 0;
+    font-size: $font-size-small;
+    padding: 7px 25px 7px 10px;
+    width: $width-search-input;
+    border: $width-border solid $gray-100;
+    border-radius: 3px;
+
+    &:focus {
+      border: $width-border solid $blue;
+    }
+  }
+
+  button[type=submit] {
+    border: 0;
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    padding: 0;
+
+    &:focus {
+      border: 0;
+      outline: 0;
+    }
+  }
+
+  @media (max-width: $width-breakpoint - 1px) {
+    position: fixed;
+    top: $height-nav-bar;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    padding: 0 15px;
+
+    input[type=search] {
+      width: 100%;
+      font-size: 16px;
+      background-color: $white;
+    }
+
+    button[type=submit] {
+      right: 25px;
+    }
+  }
+}

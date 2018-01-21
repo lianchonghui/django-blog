@@ -1,0 +1,34 @@
+@mixin reset-list() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
+
+@mixin border-bottom($width: $width-border, $color: #f1f1f1) {
+  border-bottom: $width solid $color;
+}
+
+@mixin link-effect($color:$color-text-muted, $hover-color:$color-text-muted, $darken: 85%) {
+  color: $color;
+  text-decoration: none;
+
+  &:hover {
+    color: darken($hover-color, $darken);
+  }
+}
+
+@mixin container-padding-mobile($padding:$width-gap) {
+  @media (max-width: $width-breakpoint - 1px) {
+    .container-wider {
+      padding: 0 $padding;
+    }
+  }
+}

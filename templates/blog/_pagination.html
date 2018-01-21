@@ -1,0 +1,27 @@
+<aside class="flex-center">
+  <nav class="pagination list-inline">
+    {% if first %}
+      <a href="?page=1">1</a>
+    {% endif %}
+    {% if left %}
+      {% if left_has_more %}
+        <span>...</span>
+      {% endif %}
+      {% for i in left %}
+        <a href="?page={{ i }}">{{ i }}</a>
+      {% endfor %}
+    {% endif %}
+    <a class="current" href="?page={{ page_obj.number }}">{{ page_obj.number }}</a>
+    {% if right %}
+      {% for i in right %}
+        <a href="?page={{ i }}">{{ i }}</a>
+      {% endfor %}
+      {% if right_has_more %}
+        <span>...</span>
+      {% endif %}
+    {% endif %}
+    {% if last %}
+      <a href="?page={{ paginator.num_pages }}">{{ paginator.num_pages }}</a>
+    {% endif %}
+  </nav>
+</aside>

@@ -1,0 +1,26 @@
+.post-items {
+  a {
+    @include link-effect();
+  }
+
+  .post-items-header {
+    a {
+      @include link-effect($hover-color: $blue, $darken: 0);
+    }
+  }
+}
+
+.post-item {
+  .post-item-title {
+    a {
+      color: $color-text;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .post-item-cover {
+    width: 60px;
+  }
+}

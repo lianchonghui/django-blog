@@ -1,0 +1,14 @@
+.list-inline {
+  @include reset-list;
+}
+
+.list-inline-item {
+  display: inline-block;
+}
+
+.dot-divider {
+  > *:not(:last-child):after {
+    content: '·';
+    color: $color-text-muted;
+  }
+}

@@ -1,0 +1,46 @@
+.nav-bar {
+  height: $height-nav-bar;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  border-bottom: $width-border solid $gray-100;
+
+  // remove default 15px padding bottom of container
+  > .container-wider {
+    padding-bottom: 0;
+  }
+
+  .nav-bar-logo {
+    width: $width-logo;
+  }
+
+  .nav-bar-nav {
+    @include reset-list;
+
+    .nav-item {
+      display: inline-block;
+    }
+  }
+
+  .nav-link {
+    @include link-effect($hover-color: $color-primary, $darken: 0);
+  }
+
+  //-------- notification count -----------//
+
+  .notification-count {
+    display: inline-block;
+    color: $white;
+    background-color: $cyan;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 20px;
+    padding: 0 5px;
+    position: relative;
+    top: -10px;
+  }
+}

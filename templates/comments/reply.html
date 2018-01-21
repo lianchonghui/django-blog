@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block main %}
+  <main class="unit-3-4 unit-1-on-mobile top-gap card bg-white py-5 px-7">
+    <div class="flex-left" id="c{{ blogcomment.pk }}">
+      <div class="unit-0">
+        <img class="comment-avatar mr-3" src="{{ blogcomment.user.social_avatar }}"/>
+      </div>
+      <div class="unit">
+        {% include 'comments/_comment_item.html' with comment=blogcomment %}
+      </div>
+    </div>
+    <hr class="my-4">
+    <h5>回复<span class=""> {{ blogcomment.user.name }} </span>的评论</h5>
+    <div class="commet-form-panel top-gap">
+      {% if user.is_authenticated %}
+        <div class="commet-form-panel top-gap">
+          {#  Don't use render comment form since it would render the form twice! #}
+          {% include 'comments/form.html' %}
+        </div>
+      {% else %}
+        {% include 'account/_login_panel.html' %}
+      {% endif %}
+    </div>
+  </main>
+{% endblock main %}
