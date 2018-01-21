@@ -13,6 +13,10 @@ import markdown
 from comments.models import BlogComment
 from imagekit.models import ImageSpecField
 from imagekit.processors import ResizeToFill
+'''
+django-model-utils
+https://django-model-utils.readthedocs.io/en/latest/index.html
+'''
 from model_utils import Choices
 from model_utils.fields import AutoCreatedField, AutoLastModifiedField
 
