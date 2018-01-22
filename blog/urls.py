@@ -13,7 +13,7 @@ urlpatterns = [
     ),
     url(r'^category/(?P<pk>[0-9]+)/$', views.category, name='category'),
     url(
-        r'^category/(?P<slug>[-_\w]+)/$',
+        r'^category/(?P<slug>[-_\w]+)/$',#\w包含了_,这里多余,slug来源与WordPress
         views.CategoryPostListView.as_view(),
         name='category_slug'),
     url(r'^tutorials/$', views.TutorialListView.as_view(), name='tutorials'),
