@@ -43,7 +43,7 @@ class BlogCommentModerator(CommentModerator):
                     }
                     message = t.render(c)
                     email_data = {
-                        'subject': '[追梦人物的博客]评论有了新回复',
+                        'subject': '[练崇辉的博客]评论有了新回复',
                         'message': message,
                         'fail_silently': True,
                         'html_message': message

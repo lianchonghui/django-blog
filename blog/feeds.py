@@ -5,9 +5,9 @@ from .models import Post
 
 
 class AllPostsRssFeed(Feed):
-    title = "追梦人物的博客"
+    title = "练崇辉的博客"
     link = "/"
-    description = "追梦人物的博客最新文章"
+    description = "练崇辉的博客最新文章"
 
     def items(self):
         return Post.objects.all()

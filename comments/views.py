@@ -100,7 +100,7 @@ class SendVerificationCodeView(CsrfExemptMixin, LoginRequiredMixin, JSONResponse
 
         # 发送邮件
         send_mail(
-            subject='[追梦人物的博客]请验证你的邮箱',
+            subject='[练崇辉的博客]请验证你的邮箱',
             message='你正在验证评论回复接收邮箱，验证码为 %s ,有效时间5分钟。' % verification_code,
             from_email=None,
             recipient_list=[email],
