@@ -40,7 +40,7 @@ urlpatterns = [
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += [
-    url(r'^favicon.ico$',RedirectView.as_view(url=r'favicon.ico')),       
+    url(r'^favicon.ico$',RedirectView.as_view(url=r'static/favicon.ico')),       
 ]
 if settings.DEBUG:
     import debug_toolbar
