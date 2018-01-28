@@ -18,6 +18,7 @@ from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.contrib.sitemaps.views import sitemap
+from Django.views.generic.base import RedirectView
 
 from blog.feeds import AllPostsRssFeed
 from blog.sitemaps import sitemaps
@@ -38,7 +39,9 @@ urlpatterns = [
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
+urlpatterns += [
+    url(r'^favicon.ico$',RedirectView.as_view(url=r'favicon.ico')),       
+]
 if settings.DEBUG:
     import debug_toolbar
 
