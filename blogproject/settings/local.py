@@ -6,6 +6,7 @@ SECRET_KEY = os.environ.get('DJANGO_BLOG_SECRET_KEY', default='i2k%m-808v3_)^h79
 # debug toolbar
 INTERNAL_IPS = ['127.0.0.1']
 JQUERY_URL = ''
+ALLOWED_HOSTS = ['*',]
 
 MIDDLEWARE += [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
