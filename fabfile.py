@@ -15,7 +15,7 @@ def deploy():
     sudo('systemctl stop gunicorn-blog.lianch.com')
 
     run('cd %s && git pull' % source_folder)
-    run('cd {} && cp ./lensproject/settings/production.py ./lensproject/settings/__init__.py'.format(source_folder))
+    run('cd {} && cp ./blogproject/settings/production.py ./blogproject/settings/__init__.py'.format(source_folder))
     run("""
         cd {} &&
         ../env/bin/pip install -r ./requirements/production.txt &&
