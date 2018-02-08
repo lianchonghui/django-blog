@@ -2,7 +2,7 @@ from .common import *
 
 SECRET_KEY = os.environ.get('DJANGO_BLOG_SECRET_KEY')
 
-ALLOWED_HOSTS = ['blog.lianch.com']
+ALLOWED_HOSTS = ['lianch.com','www.lianch.com','blog.lianch.com']
 DEBUG = False
 
 # django anymail
