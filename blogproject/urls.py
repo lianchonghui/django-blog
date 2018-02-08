@@ -41,6 +41,7 @@ urlpatterns = [
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += [
     url(r'^favicon.ico$',RedirectView.as_view(url=r'static/favicon.ico')),       
+    url(r'^tencent4283998380186196513.txt$',RedirectView.as_view(url=r'static/tencent4283998380186196513.txt')),       
 ]
 if settings.DEBUG:
     import debug_toolbar
