@@ -160,5 +160,5 @@ HAYSTACK_SEARCH_RESULTS_PER_PAGE = 20
 HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 HAYSTACK_CUSTOM_HIGHLIGHTER = 'blog.utils.Highlighter'
 
-ADMINS = [('zmrenwu', 'zmrenwu@163.com')]
-SERVER_EMAIL = 'localhost@zmrenwu.com'
+ADMINS = [('lianchonghui', 'lianchonghui@foxmail.com')]
+SERVER_EMAIL = 'localhost@lianch.com'
