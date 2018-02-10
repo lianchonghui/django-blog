@@ -7,9 +7,9 @@ DEBUG = False
 
 # django anymail
 # use sendgrid
-ANYMAIL = {
-    "SENDGRID_API_KEY": os.environ.get('DJANGO_BLOG_SENDGRID_API_KEY'),
-}
+#ANYMAIL = {
+#    "SENDGRID_API_KEY": os.environ.get('DJANGO_BLOG_SENDGRID_API_KEY'),
+#}
 #EMAIL_BACKEND = "anymail.backends.sendgrid.EmailBackend"
 #DEFAULT_FROM_EMAIL = "练崇辉的博客 <blog@lianch.com>"
 
