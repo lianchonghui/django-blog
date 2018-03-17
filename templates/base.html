@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static blog_tags notifications_tags %}
-<html lang="en">
+<html lang="en" xmlns:wb="https://open.weibo.com/wb">
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
@@ -24,6 +24,9 @@
   <script src="{% static 'blog/js/menu.js' %}"></script>
   <script src="{% static 'blog/js/modal.min.js' %}"></script>
   <script src="{% static 'blog/js/blog.js' %}"></script>
+  <!--weibo plugin-->
+  <script src="https://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+
   {% block link %}{% endblock link %}
 
   {% baidu_scripts %}
@@ -164,10 +167,18 @@
         <aside class="unit-1-4 unit-1-on-mobile top-gap">
           <section class="bg-white card">
             <div class="card-header">
-             我的邮箱 
+             新浪微博分享 
             </div>
             <ul>
               <li>lianchonghui@foxmail.com</li>
+            </ul>
+          </section>
+          <section class="bg-white card">
+            <div class="card-header">
+             我的邮箱 
+            </div>
+            <ul>
+                <wb:share-button appkey="2546478304" addition="simple" type="button"></wb:share-button>
             </ul>
           </section>
 
